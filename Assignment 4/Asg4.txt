@@ -1,0 +1,105 @@
+1) Creating Tables
+
+CREATE TABLE User_Info (
+     user_id INT NOT NULL AUTO_INCREMENT,
+     username VARCHAR(255) NOT NULL,
+     email varchar(255) UNIQUE NOT NULL,
+     password VARCHAR(255) NOT NULL,
+     avatar VARCHAR(255),
+     PRIMARY KEY (user_id)
+     );
+
+CREATE TABLE Blog_Post (
+     post_id INT NOT NULL AUTO_INCREMENT,
+     user_id INT NOT NULL,
+     title VARCHAR(255) NOT NULL,
+     post_content TEXT NOT NULL,
+     post_img VARCHAR(255),
+     post_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (post_id),
+     FOREIGN KEY (user_id) REFERENCES User_Info(user_id)
+     );
+
+CREATE TABLE Comment (
+     comment_id INT NOT NULL AUTO_INCREMENT,
+     post_id INT NOT NULL,
+     user_id INT NOT NULL,
+     content TEXT NOT NULL,
+     comment_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (comment_id),
+     FOREIGN KEY (post_id) REFERENCES Blog_Post(post_id),
+     FOREIGN KEY (user_id) REFERENCES User_Info(user_id)
+     );
+
+CREATE TABLE Vote (
+     vote_id INT NOT NULL AUTO_INCREMENT,
+     comment_id INT NOT NULL,
+     user_id INT NOT NULL,
+     result ENUM("up","down") NOT NULL,
+     PRIMARY KEY (vote_id),
+     FOREIGN KEY (comment_id) REFERENCES Comment(comment_id),
+     FOREIGN KEY (user_id) REFERENCES User_Info(user_id),
+     UNIQUE(comment_id, user_id)
+     );
+
+2) Data Storage
+
+INSERT INTO User_Info (username, email, password, avatar)
+VALUES ("nahid12", "nahid23@gmail.com", "password1", "/images/nahid12.png");
+
+INSERT INTO User_Info (username, email, password, avatar)
+VALUES ("parth34", "parth45@gmail.com", "password2", "/images/parth34.png");
+
+INSERT INTO User_Info (username, email, password, avatar)
+VALUES ("mehrab56", "mehrab67@gmail.com", "password3", "/images/parth56.png");
+
+INSERT INTO Blog_Post (user_id, title, post_content, post_img)
+VALUES (1, "About Me", "Content of the first post", "/images/post1.png");
+
+INSERT INTO Comment (post_id, user_id, content)
+VALUES (1, 2, "The first comment on this post!");
+
+INSERT INTO Vote (comment_id, user_id, result)
+VALUES (1, 1, "up");
+
+3) Data Retrieval
+
+SELECT user_id, username FROM User_Info
+WHERE email = "nahid23@gmail.com" AND password = "password1";
+
+
+SELECT b.post_id, b.title, b.post_time, COUNT(c.comment_id) AS comment_count
+     FROM Blog_Post AS b
+     LEFT JOIN Comment AS c ON b.post_id = c.post_id
+     GROUP BY b.post_id
+     ORDER BY b.post_time DESC
+     LIMIT 5;
+
+SELECT post_id, title, post_content, post_time
+     FROM Blog_Post
+     ORDER BY post_time DESC
+     LIMIT 20;
+
+SELECT b.post_id, b.title, b.post_content, b.post_img, b.post_time, 
+c.comment_id, c.content, u.username, u.avatar, c.comment_time,
+SUM(CASE WHEN v.result = "up" THEN 1 ELSE 0 END) AS up_votes,
+SUM(CASE WHEN v.result = "down" THEN 1 ELSE 0 END) AS down_votes
+FROM Blog_Post AS b
+LEFT JOIN Comment c ON b.post_id = c.post_id
+LEFT JOIN User_Info u ON c.user_id = u.user_id
+LEFT JOIN Vote v ON c.comment_id = v.comment_id
+WHERE b.user_id = 1
+GROUP BY b.post_id, c.comment_id
+ORDER BY b.post_time DESC;
+
+SELECT b.title, b.post_content, b.post_img, b.post_time,
+c.comment_id, c.content, u.username, u.avatar, c.comment_time,
+SUM(CASE WHEN v.result = "up" THEN 1 ELSE 0 END) AS up_votes,
+SUM(CASE WHEN v.result = "down" THEN 1 ELSE 0 END) AS down_votes
+FROM Blog_Post AS b
+LEFT JOIN Comment c ON b.post_id = c.post_id
+LEFT JOIN User_Info u ON c.user_id = u.user_id
+LEFT JOIN Vote v ON c.comment_id = v.comment_id
+WHERE b.post_id = 1
+GROUP BY c.comment_id
+ORDER BY (up_votes - down_votes) DESC;

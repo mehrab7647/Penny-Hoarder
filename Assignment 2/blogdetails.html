@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Penny Hoarder - Blog Details</title>
+    <link rel="stylesheet" type="text/css" href="asg2.css">
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <!-- Header Section -->
+        <header class="header-main">
+            <img src="images/logo.png" alt="Penny Hoarder Logo" height="150" width="150">
+            <h1>Penny Hoarder</h1>
+            <div class="user-auth-container">
+                <img src="images/avatar.jpg" height="50px" width="50px" alt="User Avatar">
+                <div>
+                    <p>Username</p>
+                </div>
+                <form action="login.html">
+                    <input type="image" src="images/logout.png" alt="Logout" height="50px" width="50px">
+                </form>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <div id="manage-menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="manage.html">Manage Posts</a></li>
+                <li><a href="blogcreate.html">Create Post</a></li>
+                <li><a href="home.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Blog Content Box -->
+            <div class="content-box">
+                <!-- Blog Image and Voting Section -->
+                <div class="flex-container">
+                    <div class="image-wrapper">
+                        <img src="https://via.placeholder.com/300x200?text=Blog+Image" alt="Blog Image">
+                    </div>
+                    <!-- Upvote and Downvote Section -->
+                    <div class="vote-container">
+                        <div class="vote-icon">&#8679;</div>
+                        <div class="vote-count-new">231</div>
+                        <div class="downvote-icon">&#8681;</div>
+                    </div>
+                </div>
+
+                <!-- Blog Title and Content Section -->
+                <div class="text-box">
+                    <h3>Blog Title Goes Here</h3>
+                    <p>
+                        This is where the blog content goes. The text should fill up this section and represent the details of the post.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comment-box">
+                <h3>&#11166; 34 Comments</h3>
+                <div class="comment-wrapper">
+                    <!-- Comment Block 1 -->
+                    <div class="comment-item">
+                        <div class="comment-avatar-new">
+                            <img src="https://via.placeholder.com/50" alt="User Avatar">
+                        </div>
+                        <div class="comment-details">
+                            <div>
+                                <div class="user-name">username12</div>
+                                <div class="comment-text">Random Comment...</div>
+                            </div>
+                            <div class="comment-actions">
+                                <div class="vote-icon">&#8679;</div>
+                                <div class="vote-count-new">127</div>
+                                <div class="downvote-icon">&#8681;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment Block 2 -->
+                    <div class="comment-item">
+                        <div class="comment-avatar-new">
+                            <img src="https://via.placeholder.com/50" alt="User Avatar">
+                        </div>
+                        <div class="comment-details">
+                            <div>
+                                <div class="user-name">username234</div>
+                                <div class="comment-text">Another Random Comment...</div>
+                            </div>
+                            <div class="comment-actions">
+                                <div class="vote-icon">&#8679;</div>
+                                <div class="vote-count-new">54</div>
+                                <div class="downvote-icon">&#8681;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Comment Section -->
+                <div class="comment-item">
+                    <div class="comment-avatar-new">
+                        <img src="images/avatar.jpg" alt="User Avatar" width="50" height="50">
+                    </div>
+                    <div class="comment-details">
+                        <textarea class="textarea-custom" rows="2" placeholder="Type your comment here..."></textarea>
+                        <button class="button-custom">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer-bar">
+            <p>&copy; Penny Hoarder 2024. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

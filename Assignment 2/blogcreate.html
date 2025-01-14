@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Hoarder - Create a Post</title>
+    <link rel="stylesheet" type="text/css" href="asg2.css">
+</head>
+
+<body>
+    <div id="container-2">
+        <!-- Header Section -->
+        <header id="header-auth">
+            <div>
+                <img src="images/logo.png" alt="Penny Hoarder Logo" height="140" width="140">
+            </div>
+            <div>
+                <h1>Penny Hoarder</h1>
+            </div>
+            <!-- User Profile & Logout -->
+            <div id="manage-logout">
+                <img src="images/avatar.jpg" height="40px" width="40px" id="avatar1" alt="User Avatar"/>
+                <div id="user-text">
+                    <p id="user1">Username</p>
+                </div>
+                <form action="login.html">
+                    <input type="image" src="images/logout.png" alt="Logout" height="50px" width="50px"/>
+                </form>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <nav id="manage-menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="create.html">Create Post</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main id="main-center-2">
+            <h2>Create a Blog Post</h2>
+            <form id="auth-form" action="post.html" method="post">
+                <div id="form-input-grid">
+                    <label id="align-right" for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter the title" required>
+
+                    <label id="align-right" for="content">Blog Content:</label>
+                    <textarea id="content" name="content" rows="10" placeholder="Write your post here..." required></textarea>
+
+                    <label id="align-right" for="media">Add Media:</label>
+                    <input type="file" id="media" name="media" accept="image/*,video/*">
+
+                    <div></div> <!-- Empty div for spacing -->
+                    <div id="form-note">
+                        <input type="submit" value="Save Draft">
+                        <input type="submit" value="Post">
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer Section -->
+        <footer id="footer-auth">
+            <p id="footer-text">&copy; Penny Hoarder 2024. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
