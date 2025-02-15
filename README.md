@@ -39,7 +39,7 @@ Using: HTML | CSS | AJAX | JavaScript | PHP | SQL
   ![image](Images/blog-creation-page.png)
 
   ## Post Management Page
-  ![image](https://github.com/user-attachments/assets/f0b06cb7-43f2-4b25-a2b5-c9d374c8a02d)
+  ![image](Images/post-management.png)
 
   
 
