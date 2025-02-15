@@ -1,4 +1,4 @@
-# <a name="uofr-cs215">🎓 CS 215 | Web and Database Programming 🎓</a>
+# <a name="uofr-cs215">🎓 CS 215 | Web and Database Programming </a>
 ```
 http://www.webdev.cs.uregina.ca/~mhf255/
 ```
@@ -11,7 +11,7 @@ http://www.webdev.cs.uregina.ca/~mhf255/
 
 
 
-# 📰 Final Assignment (6) | QnA Website
+# 📰 Final Assignment (6) | Blog Website
 This website allows users to create an account, login, post blogs and answers.
 
 ## Features
