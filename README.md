@@ -3,7 +3,7 @@
 http://www.webdev.cs.uregina.ca/~mhf255/
 ```
 ### This website hosts all the projects for this class
-![image](images/CS215.png)
+![image](Images/CS215.png)
 
 
 
@@ -12,7 +12,7 @@ http://www.webdev.cs.uregina.ca/~mhf255/
 
 
 # 📰 Final Assignment (6) | QnA Website
-This website allows users to create an account, login, post questions and answers.
+This website allows users to create an account, login, post blogs and answers.
 
 ## Features
 ```
@@ -27,21 +27,20 @@ Using: HTML | CSS | AJAX | JavaScript | PHP | SQL
 
 
   ## Home Page | Before Login:
-  ![image](https://github.com/user-attachments/assets/07afc59c-8396-4f0a-8578-c92b080cfa0c)
+  ![image](Images/home-page-before-login.png)
 
   ## Home Page | After Login
-  ![image](https://github.com/user-attachments/assets/6fe829ae-db2d-4534-ba7b-942f181cbd46)
+  ![image](Images/home-page-after-login.png)
 
   ## Signup Page:
-  ![image](https://github.com/user-attachments/assets/e51eaee3-561f-47ab-87af-cc4bef69e27c)
+  ![image](Images/signup-page.png)
 
-  ## Question Creation Page
-  ![image](https://github.com/user-attachments/assets/1572dbe0-8f5b-47af-8f29-f81d14ac4b85)
+  ## Blog Creation Page
+  ![image](Images/blog-creation-page.png)
 
-  ## My Questions Page
+  ## Post Management Page
   ![image](https://github.com/user-attachments/assets/f0b06cb7-43f2-4b25-a2b5-c9d374c8a02d)
 
-  ## Question Details Page
-  ![image](https://github.com/user-attachments/assets/9ec65681-2aac-4d18-8012-cb0c8c566bbd)
+  
 
   [back to top](#uofr-cs215)
