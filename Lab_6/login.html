@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS215 Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- JS file containing event handlers added here -->
+    <script src="js/eventHandlers.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header id="header-auth">
+            <h1>My Login History</h1>
+        </header>
+        <main id="main-center">
+            <!-- To Do 3: Add an id attribute to the form tag -->
+            <form action="loginHistory.html" id="loginform" method="post" class="auth-form" >
+                <div class="form-input-grid">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" />
+                    &nbsp; 
+                    <!-- Example: A <div> tag is added here with an id attribute 
+                         that labels it as the place to display a username error message 
+                         and provides appropriate styles for error messages-->
+                    <div id="error-text-username" class="error-text hidden">
+                        Username is invalid
+                    </div> 
+
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" />
+                    &nbsp; 
+                    <!-- To Do 3: Add text and attributes to this div so it can show password error messages -->
+                    <div id="error-text-password" class="error-text hidden">
+                        Password is invalid
+                    </div> 
+
+                </div>
+                <div class="align-right">
+                    <input type="submit" id="submit-button" value="Login" />
+
+                </div>
+            </form>
+            <div class="form-note">
+                <p>Don't have an account? <a href="signup.html">Signup</a></p>
+            </div>
+        </main>
+        <footer id="footer-auth">
+            <p class="footer-text">CS 215: Lab 5 Solution</p>
+        </footer>
+    </div>
+    <!-- JS file containing event registration added here -->
+    <script src="js/eventRegisterLogin.js"></script>
+</body>
+
+</html>

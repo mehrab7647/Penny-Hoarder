@@ -1,0 +1,288 @@
+/* 
+    Common CSS styles for all the files begins
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #fff;
+    /* CSS To Do 1: Roboto is a web delivered Google Font. 
+                    Find and CSS @import it at the top of this file */
+
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
+
+/* 
+    Common CSS styles for all the files ends
+*/
+
+
+
+/* 
+    CSS styles for Login and Signup pages begins
+*/
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-gap: 5px;
+
+    /* vh: viewport height */
+    min-height: 100vh;
+}
+
+
+#header-auth {
+    background-color: #004F2E;
+    color: white;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+header h1 {
+    /* CSS To Do 2: Make the header text 3x larger than a normal h1 */
+    font-size: 3em;
+
+
+    /* CSS To Do 3: Align the header text to the center both horizontally and vertically.
+                    Multiple solutions are possible.
+                    You may modify the parent element's CSS too if necessary. */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* If the parent element (header) doesn't have a defined height, you may need to set it: */
+    height: 100vh;
+    /* Full viewport height, optional depending on your layout */
+}
+
+#header-auth h1 {
+    display: block;
+    /* Ensure the header is displayed as a block element */
+}
+
+
+
+#main-center {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    justify-self: center;
+
+
+}
+
+
+#footer-auth {
+    background-color: black;
+
+    color: white;
+    text-align: center;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.auth-form {
+    margin-top: 60px;
+    /* CSS To Do 4: Make a border around the form with three properties: border type, color and, thickness. */
+    border: 2px solid #004F2E;
+    /* CSS To Do 5: Make edge of the border rounded. */
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.form-input-grid {
+    /* CSS To Do 6: Create a two column grid for the inputs and their labels 
+                    First column is for labels and should fit labels with no extra space
+                    Second column is for inputs and error messages and should fill the remaining space*/
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* CSS To Do 7: Set appropriate gaps between rows and columns - not too big or small.
+                    Experiment with different values until you get a pleasing result. */
+    grid-gap: 10px 15px;
+    align-items: center;
+}
+
+
+/* CSS To Do 8: Create a rule for the submit button div so that the submit button aligns to the right*/
+align-right {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* CSS To Do 9: Create a rule for the submit button 
+                to add good looking padding and margins. */
+.submit-button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #009A44;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.form-note {
+    /* CSS To Do 10: Add margins or padding to the form note rule so that the notes below the 
+                     login and signup forms line up with the labels inside the form. */
+    margin-left: auto;
+    padding: 10px;
+    grid-column: 1/ -1;
+    text-align: left;
+}
+
+.footer-text {
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+/* 
+    CSS styles for Login and Signup pages ends
+*/
+
+
+/* 
+    CSS styles for loginHistory.html begins
+*/
+#container-login-history {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-gap: 5px;
+
+    min-height: 100vh;
+}
+
+#header-login-history {
+    background-color: #004F2E;
+    color: white;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    align-items: stretch;
+    justify-items: center;
+}
+
+#user-info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+}
+
+#login-sessions {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+}
+
+
+#footer-login-history {
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.button-style-link-1 {
+    font-size: 15px;
+    color: white;
+    background-color: #009A44;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 7px;
+}
+
+#header-login-history h1 {
+    font-size: 3em;           
+    margin: 0;                
+    text-align: center;       
+}
+
+.button-style-link-2 {
+    /* CSS To Do 11: Add necessary styles for the "Edit" link 
+                     to make it look like a button (see the reference photo) */
+    font-size: 15px;
+    color: white;
+    background-color: #004F2E;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+img {
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #009A44;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section {
+    color: #34495E;
+}
+
+img {
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+aside {
+    width: 100%;
+}
+
+#user-data {
+    padding: 0px 0px 30px 20px;
+    margin: 20px 0px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+.session {
+    margin: 10px 0px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    color: #34495E;
+    margin-left: 17px;
+    padding-left: 10px;
+}
+
+
+/* 
+                        CSS styles for loginHistory.html ends
+                    */

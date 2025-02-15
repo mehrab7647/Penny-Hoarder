@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS215 Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/lab3.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header id="header-auth">
+            <h1>My Login History</h1>
+        </header>
+        <main id="main-center">
+            <form class="auth-form" action="loginHistory.html">
+                <!-- When you style this div, the form will change from single to two column -->
+                <!-- one HTML element or text node to a grid cell - each row needs two items -->
+                <div class="form-input-grid">
+                    <!-- Label -->
+                    <label for="fname">First name</label>           
+                    <!-- Input -->
+                    <input type="text" id="fname" name="fname" />   
+                    <!-- left column place holder for error row -->
+                    &nbsp;      
+                    <!-- a space for error messages in later labs -->
+                     <div id="err-fname"></div> 
+
+                    <!-- HTML Todo 1: add last name label, input and error row -->
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname" />
+                    &nbsp;
+                    <div id="err-lname"></div>
+
+                    <!-- HTML Todo 2: add username label, input and error row -->
+                     <label for="username">Username</label>
+                     <input type="text" id="username" name="username" />
+                     &nbsp;
+                     <div id="err-username"></div>
+                    
+
+                    <!-- HTML Todo 3: add password label, input and error row -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" />
+                    &nbsp;
+                    <div id="err-password"></div>
+                    <!-- HTML Todo 4: add confirm password label, input and error row -->
+                    <label for="conf-password">Confirm Password</label>
+                    <input type="text" id="conf-password" name="conf-password"/>
+                    &nbsp;
+                    <div id="err-conf-password"></div>
+                    <!-- HTML Todo 5: add Date of Birth label, input and error row -->
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" />
+                    &nbsp;
+                    <div id="err-dob"></div>
+
+                    <!-- HTML Todo 6: add Profile Picture label, input and error row -->
+                    <label for="profile-pic">Profile Picture</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                    &nbsp;
+                    <div id="err-profile-pic"></div>
+                </div>
+
+                <div class="align-right">
+                    <!-- HTML Todo 7: add a form submit button
+                                      Be sure the form has the correct attribute
+                                      to redirect users to the next page -->
+                                      <input type="submit" value="signup"/>
+
+
+
+                </div>
+            </form>
+            <div class="form-note">
+                <!-- HTML Todo 8: Add link to login page -->
+                 <p>Already have an account? <a href="login.html">Login</a></p>
+                 </div>
+
+
+            </div>
+        </main>
+        <footer id="footer-auth">
+            <p class="footer-text">CS 215: Lab 3 Solution</p>
+        </footer>
+    </div>
+</body>
+
+</html>

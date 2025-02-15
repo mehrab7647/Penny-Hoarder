@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS215 Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/lab3.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header id="header-auth">
+            <h1>My Login History</h1>
+        </header>
+        <main id="main-center">
+            <form class="auth-form" action="loginHistory.html">
+
+                <!-- When you style this div, the form will change from single to two column -->
+                <!-- one HTML element or text node to a grid cell - each row needs two items -->
+                <div class="form-input-grid">
+                    <!-- username label and input -->
+                    <label for="uname">Username</label>
+                    <input type="text" id="uname" name="uname" />
+
+                    <!-- HTML To Do 1: add password label and input 
+                              Be sure the label is *for* the input -->
+                              <label for="pword">Password</label>
+                              <input type="password" id="password" name="password" />
+
+
+                </div>
+                <div class="align-right">
+                    <!-- HTML To Do 2: add a form submit button
+                              Be sure the form has the correct attribute to
+                              redirect users to loginHistory.html when clicked -->
+                              <input type="submit" value="login"/>
+
+                </div>
+            </form>
+            <div class="form-note">
+                <!-- HTML To Do 3: add a link to the signup page -->
+                <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+            </div>
+        </main>
+        <footer id="footer-auth">
+            <p class="footer-text">CS 215: Lab 3 Solution</p>
+        </footer>
+    </div>
+</body>
+
+</html>
